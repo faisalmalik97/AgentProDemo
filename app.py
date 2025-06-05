@@ -4,6 +4,7 @@ from agentpro.tools import AresInternetTool, CalculateTool, SlideGenerationTool,
 import os
 from agentpro import create_model
 from openai import OpenAI
+import time
 
 
 # API keys from Streamlit secrets
@@ -38,6 +39,7 @@ answer_btn = st.sidebar.button("ANSWER", use_container_width=True)
 
 
 if answer_btn:
+  time.sleep(5)
    with st.spinner(" Please wait..................Aalyzing query and generating answer..."):
         try:
             # Create a model with OpenAI
@@ -53,7 +55,7 @@ if answer_btn:
 
             # Run a query
             query = user_query
-            #query = "capital city of Jordan??"
+            
             response = agent.run(query)
             st.markdown(response.final_answer, unsafe_allow_html=True)
 
