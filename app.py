@@ -62,7 +62,7 @@ if answer_btn:
         except Exception as e:
             st.error(f"Error: {e}")
 else:
-    st.info("👈 Set parameters or enter query and click 'Run Signal Analysis' to begin.")
+    st.info("👈 Press ANSWER button to begin.")
 
 #def main():
  #   col1, col2 = st.columns([1,5])
