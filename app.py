@@ -36,8 +36,8 @@ with st.expander("You can ask questions like..... (click here ! )"):
 #Query input area  
 user_query = st.text_area("Enter your question here ⬇️ ", height=250)
 
-#answer_btn = st.sidebar.button("ANSWER 🔲 ", use_container_width=True)
-answer_btn = st.button("ANSWER 🔲 ", use_container_width=True)
+answer_btn = st.sidebar.button("ANSWER 🔲 ", use_container_width=True)
+#answer_btn = st.button("ANSWER 🔲 ", use_container_width=True)
 
 if answer_btn:
   time.sleep(2)
