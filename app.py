@@ -49,7 +49,7 @@ if answer_btn:
 
             # Run a query
             query = user_query
-            #query = "capital city of australia?"
+            #query = "capital city of Jordan??"
             response = agent.run(query)
             st.markdown(response.final_answer, unsafe_allow_html=True)
 
@@ -58,32 +58,4 @@ if answer_btn:
 else:
     st.info("👈 Press ANSWER button to begin.")
 
-#def main():
- #   col1, col2 = st.columns([1,5])
-  #  with col1:
-   #     st.markdown(" Hi")
-    #with col2:
-     #   st.markdown(" Hi Again")
-
-    #st.markdown(" Processing ")
-
-    #with st.container():
-     #   st.markdown("""
-      #  <div style="background-color: white">
-       # <h3> Input your query here </h3>
-        #</div>
-        #""" , unsafe_allow_html=True)
-
-#Input section
-    #query = st.text_area("", height=100, placeholder="Smaple question here")
-
-#Button area
-    #coll, col2, col3 = st. columns ([1, 1, 1])
-    #with col2:
-     #   run_button = st.button("Run Agent", use_container_width=True)
-        
-        
-#return response
-#print(f"\nFinal Answer: {response.final_answer}")
-#response = agent.run(query)
 
