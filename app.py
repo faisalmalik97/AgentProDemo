@@ -42,15 +42,14 @@ query = "capital city of australia?"
 response = agent.run(query)
 st.markdown(response.final_answer, unsafe_allow_html=True)
 
+def main():
+    col1, col2 = st.columns([1,5])
+    with col1:
+        st.markdown(" Hi")
+    with col2:
+        st.markdown(" Hi Again")
 
-#def main():
- #   col1, col2 = st.columns([1,5])
-  #  with col1:
-   #     st.markdown(" Hi")
-    #with col2:
-     #   st.markdown(" Hi Again")
-
-    #st.markdown(" Processing ")
+    st.markdown(" Processing ")
 
     #with st.container():
      #   st.markdown("""
