@@ -34,15 +34,15 @@ with st.expander("You can ask questions like..... (click here ! )"):
 
 
 #Query input area  
-user_query = st.text_area("Enter your question here ⬇️ ", height=250)
+user_query = st.text_area("Enter your question here ⬇️ ", height=150)
 
 
 #answer_btn = st.button("ANSWER 🔲 ", use_container_width=True)
 st.sidebar.link_button('🇦🇺 HomeAffair Website ', 'https://immi.homeaffairs.gov.au', use_container_width=True)
-st.sidebar.link_button('Test and Interview Info ', 'https://immi.homeaffairs.gov.au/citizenship/test-and-interview/our-common-bond', use_container_width=True)
-st.sidebar.link_button('Download Testbooklet PDF', 'https://immi.homeaffairs.gov.au/citizenship-subsite/files/our-common-bond-testable.pdf', use_container_width=True)
+st.sidebar.link_button('Test & Interview Info ', 'https://immi.homeaffairs.gov.au/citizenship/test-and-interview/our-common-bond', use_container_width=True)
+st.sidebar.link_button('Download Testbooklet', 'https://immi.homeaffairs.gov.au/citizenship-subsite/files/our-common-bond-testable.pdf', use_container_width=True)
 st.sidebar.info('This is for purely informational purposes', icon="ℹ️", width="stretch")
-answer_btn = st.sidebar.button("ANSWER 🔲 ", use_container_width=True)
+answer_btn = st.sidebar.button(" ANSWER 🔲 ", use_container_width=True)
 
 if answer_btn:
   time.sleep(2)
