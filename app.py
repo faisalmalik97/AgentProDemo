@@ -28,9 +28,9 @@ with st.expander("Example query (read-only)"):
 
 input_mode = st.radio("See example:", ["Enter full query text"])
 
-input_mode == "Enter full query text":
-    user_query = st.text_area("Enter your full query here", height=250)
-    analyze_btn = st.sidebar.button("Run Signal Analysis")
+input_mode == "Enter full query text"
+user_query = st.text_area("Enter your full query here", height=250)
+analyze_btn = st.sidebar.button("Run Signal Analysis")
 #else:
     # Sidebar parameters
  #   st.sidebar.header("Signal Simulation Parameters")
