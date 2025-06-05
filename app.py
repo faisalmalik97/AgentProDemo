@@ -17,7 +17,6 @@ st.title(" 🇦🇺 Citizenship Test Assistant Agent")
 st.header("Quick answers from test booklet and web")
 
 sample_query = """
-Please show me sample questions
 1. What is national flower of Australia?
 2. What is australian national anthem called and show it here?
 3. Tell me about number of seats in lower house and upper house?
@@ -26,8 +25,8 @@ Please show me sample questions
   
 """
 
-with st.expander("Example query (read-only)"):
-    st.text_area("Sample Query", value=sample_query, height=200, disabled=True)
+with st.expander("You can ask questions like..... (read-only)"):
+    st.text_area("Sample Questions", value=sample_query, height=200, disabled=True)
 
 input_mode = st.radio("See Available Options:", ["Enter full query text"])
 
