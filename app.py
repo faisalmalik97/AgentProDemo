@@ -41,7 +41,7 @@ answer_btn = st.sidebar.button("ANSWER 🔲 ", use_container_width=True)
 
 if answer_btn:
   time.sleep(2)
-   with st.spinner(" Please wait..................Aalyzing query and generating answer..."):
+  with st.spinner(" Please wait..................Aalyzing query and generating answer..."):
         try:
             # Create a model with OpenAI
             model = create_model(provider="openai", model_name="gpt-4o", api_key=os.getenv("OPENAI_API_KEY", None))
