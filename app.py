@@ -24,17 +24,6 @@ with st.expander("Example query (read-only)"):
 
 input_mode = st.radio("Choose input mode:", ["Enter full query text", "Set parameters"])
 
-#if input_mode == "Enter full query text":
- #   user_query = st.text_area("Enter your full query here", height=250)
-  #  analyze_btn = st.sidebar.button("Run AGENT")
-#else:
-    # Sidebar parameters
- #   st.sidebar.header("Signal Simulation Parameters")
-  #  duration = st.sidebar.slider("Duration (s)", 1, 10, 2)
-   # sampling_rate = st.sidebar.slider("Sampling Rate (Hz)", 500, 10000, 2000)
-    #frequencies = st.sidebar.text_input("Frequencies (comma-separated)", "50,150,300")
-    #amplitudes = st.sidebar.text_input("Amplitudes (comma-separated)", "1,0.5,0.2")
-    #analyze_btn = st.sidebar.button("Run AGENT")
 
 # Create a model with OpenAI
 model = create_model(provider="openai", model_name="gpt-4o", api_key=os.getenv("OPENAI_API_KEY", None))
@@ -45,3 +34,9 @@ tools = [AresInternetTool(os.getenv("ARES_API_KEY", None)), CalculateTool(), Sli
 
 # Initialize agent
 agent = ReactAgent(model=model, tools=tools)
+
+# Run a query
+query = "capital city of australi?"
+response = agent.run(query)
+
+print(f"\nFinal Answer: {response.final_answer}")
