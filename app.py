@@ -46,7 +46,18 @@ st.sidebar.markdown('''Press button below to get answer of your question! :ballo
 answer_btn = st.sidebar.button(" ANSWER 🔲 ", use_container_width=True)
 
 if answer_btn:
-  time.sleep(2)
+  #time.sleep(2)
+  
+  progress_bar = st.progress(0)
+  st.title("Progress Bar Example")
+  # Initialize the progress bar at 0%
+  progress_bar = st.progress(0)
+  # Simulate a task by updating the progress bar over time
+  for percent_complete in range(100):
+    time.sleep(0.05)  # Simulate work being done
+    progress_bar.progress(percent_complete + 1)
+  st.success("Task completed!")
+  
   with st.spinner(" Please wait..................Aalyzing query and generating answer..."):
         try:
             # Create a model with OpenAI
