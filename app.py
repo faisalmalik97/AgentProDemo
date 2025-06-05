@@ -41,7 +41,7 @@ agent = ReactAgent(model=model, tools=tools)
 #query = "capital city of australia?"
 response = agent.run(query)
 
-return response
+
 
 def main():
     col1, col2 = st.columns([1,5])
@@ -68,5 +68,5 @@ def main():
         run_button = st.button("Run Agent", use_container_width=True)
         
         
-
+return response
 #print(f"\nFinal Answer: {response.final_answer}")
