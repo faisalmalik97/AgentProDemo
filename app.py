@@ -49,26 +49,23 @@ else:
 if analyze_btn:
    with st.spinner("Generating and analyzing signal..."):
         try:
+            # Create a model with OpenAI
+            model = create_model(provider="openai", model_name="gpt-4o", api_key=os.getenv("OPENAI_API_KEY", None))
+            #input_mode = st.radio("Choose input mode:", ["Enter full query text", "Set parameters"])
 
-#input_mode = st.radio("Choose input mode:", ["Enter full query text", "Set parameters"])
+            # Initialize tools
+            traversaal_rag_tool = TraversaalProRAGTool(api_key=os.getenv("TRAVERSAAL_PRO_API_KEY", None), document_names="australian_citizenship_testbook")
+            tools = [AresInternetTool(os.getenv("ARES_API_KEY", None)), CalculateTool(), SlideGenerationTool(), traversaal_rag_tool]
 
+            # Initialize agent
+            agent = ReactAgent(model=model, tools=tools)
 
-# Create a model with OpenAI
-model = create_model(provider="openai", model_name="gpt-4o", api_key=os.getenv("OPENAI_API_KEY", None))
+            # Run a query
+            query = "capital city of australia?"
+            response = agent.run(query)
+            st.markdown(response.final_answer, unsafe_allow_html=True)
 
-# Initialize tools
-traversaal_rag_tool = TraversaalProRAGTool(api_key=os.getenv("TRAVERSAAL_PRO_API_KEY", None), document_names="australian_citizenship_testbook")
-tools = [AresInternetTool(os.getenv("ARES_API_KEY", None)), CalculateTool(), SlideGenerationTool(), traversaal_rag_tool]
-
-# Initialize agent
-agent = ReactAgent(model=model, tools=tools)
-
-# Run a query
-query = "capital city of australia?"
-response = agent.run(query)
-st.markdown(response.final_answer, unsafe_allow_html=True)
-
-except Exception as e:
+        except Exception as e:
             st.error(f"Error: {e}")
 else:
     st.info("👈 Set parameters or enter query and click 'Run Signal Analysis' to begin.")
