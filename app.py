@@ -26,7 +26,7 @@ Please show me blalalll
 with st.expander("Example query (read-only)"):
     st.text_area("Sample Query", value=sample_query, height=200, disabled=True)
 
-input_mode = st.radio("See example:", ["Enter full query text"])
+#input_mode = st.radio("See example:", ["Enter full query text"])
 
 input_mode == "Enter full query text"
 user_query = st.text_area("Enter your full query here", height=250)
