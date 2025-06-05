@@ -39,7 +39,9 @@ user_query = st.text_area("Enter your question here ⬇️ ", height=250)
 
 #answer_btn = st.button("ANSWER 🔲 ", use_container_width=True)
 st.sidebar.link_button('HomeAffair Website ', 'https://immi.homeaffairs.gov.au', use_container_width=True)
-st.sidebar.link_button('Download Test Booklet ', 'https://immi.homeaffairs.gov.au/citizenship-subsite/files/our-common-bond-testable.pdf', use_container_width=True)
+st.sidebar.link_button('Test and Interview Info ', 'https://immi.homeaffairs.gov.au/citizenship/test-and-interview/our-common-bond', use_container_width=True)
+st.sidebar.link_button('Download Test Booklet ENG', 'https://immi.homeaffairs.gov.au/citizenship-subsite/files/our-common-bond-testable.pdf', use_container_width=True)
+st.sidebar.warning('This is a warning', icon="⚠️")
 answer_btn = st.sidebar.button("ANSWER 🔲 ", use_container_width=True)
 
 if answer_btn:
