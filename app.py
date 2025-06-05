@@ -51,12 +51,12 @@ def main():
 
     st.markdown(" Processing ")
 
-    #with st.container():
-     #   st.markdown("""
-      #  <div style="background-color: white">
-       # <h3> Input your query here </h3>
-        #</div>
-        #""" , unsafe_allow_html=True)
+    with st.container():
+        st.markdown("""
+        <div style="background-color: white">
+        <h3> Input your query here </h3>
+        </div>
+        """ , unsafe_allow_html=True)
 
 #Input section
     #query = st.text_area("", height=100, placeholder="Smaple question here")
