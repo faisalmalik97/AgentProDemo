@@ -17,34 +17,28 @@ st.title("🔍 Support Assistan Agent")
 st.header("Header of AI Agent")
 
 sample_query = """
-Please simulate a multi-tone sine wave with frequencies 100Hz and 300Hz (duration = 2 seconds, sampling_rate = 2000 Hz)
-Once the signal is generated:
-1. Compute its FFT and identify any prominent peaks.
-2. Detect if there is any unexpected frequency component (for example, a DC bias or 60 Hz hum).
-3. Hypothesize likely causes for any anomaly.
-4. Finally, give me a markdown-formatted summary that includes:
-  - Time-domain plot (as a base64 image or description)
-  - Frequency-domain plot (as a base64 image or description)
-  - A bullet-list of detected peaks
-  - A plain-English diagnosis of what might have gone wrong in the simulated signal.
+Please show me blalalll
+2.
+3.
+  
 """
 
 with st.expander("Example query (read-only)"):
     st.text_area("Sample Query", value=sample_query, height=200, disabled=True)
 
-input_mode = st.radio("Choose input mode:", ["Enter full query text", "Set parameters"])
+input_mode = st.radio("See example:", ["Enter full query text"])
 
-if input_mode == "Enter full query text":
+input_mode == "Enter full query text":
     user_query = st.text_area("Enter your full query here", height=250)
     analyze_btn = st.sidebar.button("Run Signal Analysis")
-else:
+#else:
     # Sidebar parameters
-    st.sidebar.header("Signal Simulation Parameters")
-    duration = st.sidebar.slider("Duration (s)", 1, 10, 2)
-    sampling_rate = st.sidebar.slider("Sampling Rate (Hz)", 500, 10000, 2000)
-    frequencies = st.sidebar.text_input("Frequencies (comma-separated)", "50,150,300")
-    amplitudes = st.sidebar.text_input("Amplitudes (comma-separated)", "1,0.5,0.2")
-    analyze_btn = st.sidebar.button("Run Signal Analysis")
+ #   st.sidebar.header("Signal Simulation Parameters")
+  #  duration = st.sidebar.slider("Duration (s)", 1, 10, 2)
+   # sampling_rate = st.sidebar.slider("Sampling Rate (Hz)", 500, 10000, 2000)
+    #frequencies = st.sidebar.text_input("Frequencies (comma-separated)", "50,150,300")
+    #amplitudes = st.sidebar.text_input("Amplitudes (comma-separated)", "1,0.5,0.2")
+    #analyze_btn = st.sidebar.button("Run Signal Analysis")
 
 if analyze_btn:
    with st.spinner("Generating and analyzing signal..."):
