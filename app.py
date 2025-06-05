@@ -26,11 +26,11 @@ Please show me blalalll
 with st.expander("Example query (read-only)"):
     st.text_area("Sample Query", value=sample_query, height=200, disabled=True)
 
-input_mode = st.radio("See example:", ["Enter full query text"])
+input_mode = st.radio("See Available Options:", ["Enter full query text"])
 
 input_mode == "Enter full query text"
 user_query = st.text_area("Enter your full query here", height=250)
-analyze_btn = st.sidebar.button("Run Signal Analysis")
+answer_btn = st.sidebar.button("ANSWER")
 #else:
     # Sidebar parameters
  #   st.sidebar.header("Signal Simulation Parameters")
@@ -40,7 +40,7 @@ analyze_btn = st.sidebar.button("Run Signal Analysis")
     #amplitudes = st.sidebar.text_input("Amplitudes (comma-separated)", "1,0.5,0.2")
     #analyze_btn = st.sidebar.button("Run Signal Analysis")
 
-if analyze_btn:
+if answer_btn:
    with st.spinner("Generating and analyzing signal..."):
         try:
             # Create a model with OpenAI
