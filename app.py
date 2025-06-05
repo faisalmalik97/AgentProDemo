@@ -34,12 +34,13 @@ with st.expander("You can ask questions like..... (click here ! )"):
 
 
 #Query input area  
-user_query = st.text_area("Enter your full query here", height=250)
-answer_btn = st.sidebar.button("ANSWER", use_container_width=True)
+user_query = st.text_area("Enter your question here ⬇️ ", height=250)
+
+answer_btn = st.sidebar.button("ANSWER 🔲 ", use_container_width=True)
 
 
 if answer_btn:
-  time.sleep(5)
+  time.sleep(2)
    with st.spinner(" Please wait..................Aalyzing query and generating answer..."):
         try:
             # Create a model with OpenAI
@@ -62,6 +63,6 @@ if answer_btn:
         except Exception as e:
             st.error(f"Error: {e}")
 else:
-    st.info("👈 Press ANSWER button on left side to begin.")
+    st.info("👈 Press ANSWER 🔲 button on left side to begin.")
 
 
