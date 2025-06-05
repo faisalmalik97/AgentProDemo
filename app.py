@@ -38,7 +38,7 @@ tools = [AresInternetTool(os.getenv("ARES_API_KEY", None)), CalculateTool(), Sli
 agent = ReactAgent(model=model, tools=tools)
 
 # Run a query
-query = "capital city of australi?"
+#query = "capital city of australia?"
 response = agent.run(query)
 
 return response
