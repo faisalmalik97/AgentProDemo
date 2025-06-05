@@ -25,7 +25,7 @@ sample_query = """
   
 """
 
-with st.expander("You can ask questions like..... (read-only)"):
+with st.expander("You can ask questions like..... (click here ! )"):
     st.text_area("Sample Questions", value=sample_query, height=200, disabled=True)
 
 input_mode = st.radio("See Available Options:", ["Enter full query text"])
