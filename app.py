@@ -35,3 +35,13 @@ else:
     frequencies = st.sidebar.text_input("Frequencies (comma-separated)", "50,150,300")
     amplitudes = st.sidebar.text_input("Amplitudes (comma-separated)", "1,0.5,0.2")
     analyze_btn = st.sidebar.button("Run AGENT")
+
+# Create a model with OpenAI
+model = create_model(provider="openai", model_name="gpt-4o", api_key=os.getenv("OPENAI_API_KEY", None))
+
+# Initialize tools
+traversaal_rag_tool = TraversaalProRAGTool(api_key=os.getenv("TRAVERSAAL_PRO_API_KEY", None), document_names="australian_citizenship_testbook")
+tools = [AresInternetTool(os.getenv("ARES_API_KEY", None)), CalculateTool(), SlideGenerationTool(), traversaal_rag_tool]
+
+# Initialize agent
+agent = ReactAgent(model=model, tools=tools)
