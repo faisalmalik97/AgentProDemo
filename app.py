@@ -38,7 +38,9 @@ user_query = st.text_area("Enter your question here ⬇️ ", height=250)
 
 answer_btn = st.sidebar.button("ANSWER 🔲 ", use_container_width=True)
 #answer_btn = st.button("ANSWER 🔲 ", use_container_width=True)
-st.sidebar.link_button('Test Button', 'https://www.youtube.com/watch?v=FEKX1FjLAlo')
+st.sidebar.link_button('Download Test Booklet ', 'https://immi.homeaffairs.gov.au/citizenship-subsite/files/our-common-bond-testable.pdf', use_container_width=True)
+
+
 if answer_btn:
   time.sleep(2)
   with st.spinner(" Please wait..................Aalyzing query and generating answer..."):
