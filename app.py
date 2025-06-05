@@ -42,6 +42,7 @@ st.sidebar.link_button('🇦🇺 HomeAffair Website ', 'https://immi.homeaffairs
 st.sidebar.link_button('Test & Interview Info ', 'https://immi.homeaffairs.gov.au/citizenship/test-and-interview/our-common-bond', use_container_width=True)
 st.sidebar.link_button('Download Testbooklet', 'https://immi.homeaffairs.gov.au/citizenship-subsite/files/our-common-bond-testable.pdf', use_container_width=True)
 st.sidebar.info('This is for purely informational purposes', icon="ℹ️", width="stretch")
+st.sidebar.markdown('''Press button to get answer of your question! :balloon:''')
 answer_btn = st.sidebar.button(" ANSWER 🔲 ", use_container_width=True)
 
 if answer_btn:
