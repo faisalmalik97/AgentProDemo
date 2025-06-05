@@ -39,4 +39,7 @@ agent = ReactAgent(model=model, tools=tools)
 query = "capital city of australi?"
 response = agent.run(query)
 
-print(f"\nFinal Answer: {response.final_answer}")
+return response
+
+
+#print(f"\nFinal Answer: {response.final_answer}")
