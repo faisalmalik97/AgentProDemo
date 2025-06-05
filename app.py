@@ -16,6 +16,8 @@ page_title="Support Assistant Agent", layout="wide"
 st.title(" 🇦🇺 Citizenship Test Assistant Agent")
 st.header("Quick answers from test booklet and web")
 
+
+#Sample Questions for suggestion
 sample_query = """
 1. What is national flower of Australia?
 2. What is australian national anthem called and show it here?
@@ -25,12 +27,12 @@ sample_query = """
   
 """
 
+#dropdown list of sample questons
 with st.expander("You can ask questions like..... (click here ! )"):
     st.text_area("Sample Questions", value=sample_query, height=200, disabled=True)
 
-#input_mode = st.radio("See Available Options:", ["Enter full query text"])
 
-#input_mode == "Enter full query text"
+#Query input area  
 user_query = st.text_area("Enter your full query here", height=250)
 answer_btn = st.sidebar.button("ANSWER", use_container_width=True)
 
@@ -58,6 +60,6 @@ if answer_btn:
         except Exception as e:
             st.error(f"Error: {e}")
 else:
-    st.info("👈 Press ANSWER button to begin.")
+    st.info("👈 Press ANSWER button on left side to begin.")
 
 
