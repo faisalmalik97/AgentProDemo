@@ -31,17 +31,10 @@ input_mode = st.radio("See Available Options:", ["Enter full query text"])
 input_mode == "Enter full query text"
 user_query = st.text_area("Enter your full query here", height=250)
 answer_btn = st.sidebar.button("ANSWER")
-#else:
-    # Sidebar parameters
- #   st.sidebar.header("Signal Simulation Parameters")
-  #  duration = st.sidebar.slider("Duration (s)", 1, 10, 2)
-   # sampling_rate = st.sidebar.slider("Sampling Rate (Hz)", 500, 10000, 2000)
-    #frequencies = st.sidebar.text_input("Frequencies (comma-separated)", "50,150,300")
-    #amplitudes = st.sidebar.text_input("Amplitudes (comma-separated)", "1,0.5,0.2")
-    #analyze_btn = st.sidebar.button("Run Signal Analysis")
+
 
 if answer_btn:
-   with st.spinner("Generating and analyzing signal..."):
+   with st.spinner(" Please wait..................Aalyzing query and generating answer..."):
         try:
             # Create a model with OpenAI
             model = create_model(provider="openai", model_name="gpt-4o", api_key=os.getenv("OPENAI_API_KEY", None))
@@ -55,7 +48,8 @@ if answer_btn:
             agent = ReactAgent(model=model, tools=tools)
 
             # Run a query
-            query = "capital city of australia?"
+            query = user_query
+            #query = "capital city of australia?"
             response = agent.run(query)
             st.markdown(response.final_answer, unsafe_allow_html=True)
 
