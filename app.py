@@ -14,6 +14,10 @@ st.set_page_config(page_title="Support Assistant Agent", layout="wide")
 st.title("🔍 Support Assistan Agent")
 st.header("Header of AI Agent")
 
+# Example query 
+sample_query = """
+THIS IS AN EXAMPLE QUERY TO TEST AREA OF INPUT
+"""
 
 with st.expander("Example query (read-only)"):
     st.text_area("Sample Query", value=sample_query, height=200, disabled=True)
