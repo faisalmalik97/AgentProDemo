@@ -33,7 +33,7 @@ input_mode = st.radio("See Available Options:", ["Enter full query text"])
 
 input_mode == "Enter full query text"
 user_query = st.text_area("Enter your full query here", height=250)
-answer_btn = st.sidebar.button("ANSWER", use_container_width=True))
+answer_btn = st.sidebar.button("ANSWER", use_container_width=True)
 
 
 if answer_btn:
