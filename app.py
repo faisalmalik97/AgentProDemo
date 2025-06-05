@@ -13,13 +13,16 @@ ares_key = st.secrets["ARES_API_KEY"]
 st.set_page_config(
 page_title="Support Assistant Agent", layout="wide"
 )
-st.title("🔍 Support Assistan Agent")
-st.header("Header of AI Agent")
+st.title(" 🇦🇺 Citizenship Test Assistant Agent")
+st.header("Quick answers from test booklet and web")
 
 sample_query = """
-Please show me blalalll
-2.
-3.
+Please show me sample questions
+1. What is national flower of Australia?
+2. What is australian national anthem called and show it here?
+3. Tell me about number of seats in lower house and upper house?
+4. How many states and territories in Australia?
+5. Which city is capital of Queensland?
   
 """
 
@@ -30,7 +33,7 @@ input_mode = st.radio("See Available Options:", ["Enter full query text"])
 
 input_mode == "Enter full query text"
 user_query = st.text_area("Enter your full query here", height=250)
-answer_btn = st.sidebar.button("ANSWER")
+answer_btn = st.sidebar.button("ANSWER", use_container_width=True))
 
 
 if answer_btn:
