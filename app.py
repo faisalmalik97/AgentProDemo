@@ -1,7 +1,10 @@
 import streamlit as st
-import openai
 from agentpro import create_model, ReactAgent
-from agentpro.tools import AresInternetTool, UserInputTool, CalculateTool 
+from agentpro.tools import AresInternetTool, CalculateTool, SlideGenerationTool, TraversaalProRAGTool
+import os
+from agentpro import create_model
+from openai import OpenAI
+
 
 # Set your API keys here or use Streamlit secrets
 #openai.api_key = st.secrets["OPENAI_API_KEY"]
