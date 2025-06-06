@@ -191,6 +191,7 @@ AgentPro/
 │   ├── quick_start.ipynb
 │   └── custool_tool.ipynb      
 ├── main.py                             # Entrypoint to run the agent
+├── app.py                              # file contains main code to interact with streamlit
 ├── requirements.txt                    # Dependencies
 ├── README.md                           # Project overview, usage instructions, and documentation
 ├── setup.py       
